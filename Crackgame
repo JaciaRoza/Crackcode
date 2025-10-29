@@ -1,0 +1,25 @@
+package javaPack;
+
+import java.util.Scanner; // Imports the Scanner class to read user input
+//Defines a public class named Crackgame
+public class Crackgame {
+    public Crackgame() {
+		// Create a Scanner object to take input from the user
+        Scanner input = new Scanner(System.in);
+        // Print a welcome message and introduce the second game/riddle
+        System.out.println("Welcome to the second stage!\n");
+        System.out.println("To reach the last stage, you must guess a number I am thinking."); // Explain the goal of this stage
+        System.out.println("What number am I? (Hint: Maybe it's 19... or something between 35 and 78!)"); // Provide a hint for the user
+        int answer = input.nextInt(); // Read the user's answer as a integer and stores it in the variable answer
+        // The user must input either the number 19, or numbers between 35 and 78
+        if (answer == 19 || (answer >= 35 && answer < 78)) 
+        {
+            System.out.println("Correct! On to the last stage ----->"); // If the guess is correct, display success message
+            Cracklast lastgame = new Cracklast(); // A new class and the program goes there
+        } 
+        else 
+        {
+            System.out.println("Sadly, you got it wrong! Goodbye!"); // If the guess is incorrect, display a failure message
+        }
+    }
+}
