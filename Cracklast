@@ -1,0 +1,25 @@
+package javaPack;
+
+import java.util.Scanner; // Imports the Scanner class to read user input
+//Defines a public class named Cracklast
+public class Cracklast {
+	public Cracklast() {
+		// Create a Scanner object to take input from the user
+        Scanner input = new Scanner(System.in);
+     // Congratulate the user for reaching the final stage
+        System.out.println("You made it to the end!! Now it's up to you.\n");
+        System.out.print("Enter an integer and I'll decide if you win Crack The Code: "); // Ask the user to enter an integer for the final test
+        int answer = input.nextInt(); // Read the user's answer as a integer and stores it in the variable answer
+        int even = answer % 2; // Calculate if the number is even (remainder when divided by 2)
+        int remainder = answer % 10; // Calculate the last digit of the number (remainder when divided by 10)
+     // If the number is even (even == 0) or its last digit is 1, the user wins the game
+        if(even == 0 || remainder == 1)
+        {
+			System.out.println("Correct! You won Crack The Code!!!!🥳🥳🥳🥳"); // If the guess is correct, congratulate the user
+		}
+		else
+		{
+			System.out.println("Sadly you got it wrong! Goodbye!"); // If the guess is incorrect, display a failure message
+		}
+	}
+}
