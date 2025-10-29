@@ -1,0 +1,8 @@
+package javaPack;
+//Defines a public class named Crackinfo
+public class Crackinfo {
+	public static void main(String[] args) {
+		Crackcode info = new Crackcode(); // A new class, the program goes directly to Crackcode after being here first
+
+	}
+}
