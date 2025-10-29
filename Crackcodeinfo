@@ -1,0 +1,26 @@
+package javaPack;
+
+import java.util.Scanner;// Imports the Scanner class to read user input
+//Defines a public class named Crackcodeinfo
+public class Crackcodeinfo {
+	public Crackcodeinfo() {
+		// Create a Scanner object to take input from the user
+        Scanner input = new Scanner(System.in);
+        // Print a welcome message and introduce the first game/riddle
+        System.out.println("Welcome to the first game!! "+ "To move to the next stage you first have to answer a riddle!\n ");
+        System.out.println("I purr when I'm happy, I chase when I play,\n"
+        		+ "I nap in the sun for most of the day.\n"
+        		+ "What am I? ");
+        String answer = input.nextLine(); // Read the user's answer as a string and stores it in the variable answer
+     // Check if the answer has exactly 3 characters
+        if(answer.length() == 3)
+        {
+			System.out.println("Correct! On to the next stage ----->"); // If true, print a success message and move to the next stage
+			Crackgame nextgame = new Crackgame(); // A new class and the program goes there
+		}
+		else if(answer.length() != 3)
+		{
+			System.out.println("Sadly you got it wrong! Goodbye!"); // If the answer length is not 3, print a failure message
+		}
+	}
+}
