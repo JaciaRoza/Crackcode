@@ -1,0 +1,31 @@
+package javaPack;
+
+import java.util.Scanner; // Imports the Scanner class to read user input 
+//Defines a public class named Crackcode
+public class Crackcode {
+	public Crackcode() {
+		// Create a Scanner object to take input from the user
+        Scanner input = new Scanner(System.in);
+        // Print a welcome message
+        System.out.println("Welcome to crack the code!\n..............................................Before we start........................................................................\n"); 
+        // Informs the user how to input information
+        System.out.println("Here are some rules/directions:\n"+ "In this game, there are three stages, in every stage there are riddles for you to solve.\n"+ 
+        "In stage 1 you have to enter a three letter answer related to the question to move to the next stage or else you lose the game.\n" +
+        		"In stage 2 and 3 you have to enter a integer answer and the answer must satisfy/be related to what the question ask or else you lose the game entirely.");
+        System.out.println("Enter your name: "); // Ask the user to enter their name
+        String name = input.nextLine(); // Read the user's input as a string and stores it in the variable name
+     // Greet the user and ask if they want to start the game
+        System.out.println("\nHello " + name + "\nAre you ready to crack the code?" + " Type (Yes to start or No to leave): ");
+        String option = input.nextLine(); // Read the user's choice (Yes/No)
+
+     // If the user types "YES" or "Y" the program make every letter uppercase and goes to another class called Crackcodeinfo
+        if(option.toUpperCase().equals("YES") || option.toUpperCase().equals("Y")) 
+        {
+        	Crackcodeinfo info = new Crackcodeinfo(); // A new class
+		}
+        else if(option.toUpperCase().equals("NO")|| option.toUpperCase().equals("N")) // If the user types "NO" or "N" the program make every letter uppercase, exit the game with a goodbye message
+        {
+			System.out.println("Goodbye " + name + "!!" + " Hope to see you again!");
+		}
+	}
+}
